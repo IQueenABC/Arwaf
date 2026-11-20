@@ -257,6 +257,37 @@ h1,h2,h3,.basmala,.namepill,.name,.who,.big,.v,.pillar b,.eth b,.aim b,.strength
 .strength .card .ico{width:30px; height:30px; margin-top:5px}
 .strength b{display:block; font-family:var(--font-display); font-weight:700; font-size:19px; line-height:1.7}
 .strength span{color:var(--ink2); font-size:15px; line-height:1.85}
+.period{margin:0; padding:2px 20px; border:1.5px solid var(--p3); border-radius:999px; font-family:var(--font-display); font-weight:700; font-size:18px; line-height:1.9; color:var(--accent)}
+.tasks{display:grid; gap:8px}
+.task{display:flex; align-items:center; gap:12px; min-height:50px; padding:8px 14px; background:var(--surface); border:1px solid var(--line); border-radius:16px; text-decoration:none; font-weight:400}
+.task .ico{width:24px; height:24px}
+.task span{min-width:0}
+table.ev,.ev tbody,.ev tr,.ev td{display:block}
+.ev{margin-top:14px; width:100%}
+.ev thead{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+.ev tr{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:4px 16px; margin-top:12px}
+.ev td{display:grid; grid-template-columns:96px minmax(0,1fr); gap:10px; padding:10px 0; border-top:1px solid var(--line); font-size:15px; line-height:1.8}
+.ev td:first-child{border-top:0}
+.ev td::before{content:attr(data-l); font-family:var(--font-display); font-weight:700; color:var(--accent); font-size:14px}
+.ev td a{font-family:var(--font-display); font-weight:700}
+.todo{color:var(--ink2)}
+.certlist{display:grid; gap:14px}
+.cert{background:var(--surface); border:1px solid var(--line); border-radius:22px; padding:18px; box-shadow:0 10px 26px -14px var(--shadow)}
+.cert .top{display:flex; gap:12px; align-items:flex-start}
+.cert .rk{width:34px; height:34px; flex:none; border-radius:50%; display:grid; place-items:center; background:linear-gradient(135deg,var(--hero-a),var(--hero-b)); color:var(--on-hero); font-family:var(--font-display); font-weight:700; margin-top:4px}
+.cert h3{font-family:var(--font-display); font-weight:700; font-size:19px; line-height:1.7; min-width:0; overflow-wrap:anywhere}
+.cert dl{margin:12px 0 0; display:grid}
+.cert dl div{padding:9px 0; border-top:1px solid var(--line)}
+.cert dt{font-family:var(--font-display); font-weight:700; color:var(--accent); font-size:14px}
+.cert dd{margin:0; font-size:15px; line-height:1.85; overflow-wrap:anywhere}
+.ctwrap{background:var(--surface); border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:0 10px 26px -14px var(--shadow)}
+table.ct{width:100%; border-collapse:collapse; font-size:14px; line-height:1.75; table-layout:fixed}
+.ct th{background:linear-gradient(120deg,var(--hero-a),var(--hero-b)); color:var(--on-hero); font-family:var(--font-display); font-weight:700; font-size:14px; padding:10px 8px; text-align:start}
+.ct td{padding:10px 8px; border-top:1px solid var(--line); vertical-align:top; overflow-wrap:anywhere}
+.ct th:nth-child(1),.ct td:nth-child(1){width:38%}
+.ct th:nth-child(2),.ct td:nth-child(2){width:34%}
+.ct td:nth-child(1){font-family:var(--font-display); font-weight:700}
+.ct tbody tr:nth-child(even) td{background:var(--wash)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .petal{display:none}
@@ -320,6 +351,7 @@ h1,h2,h3,.basmala,.namepill,.name,.who,.big,.v,.pillar b,.eth b,.aim b,.strength
       <p class="sub">المساعد الإداري</p>
       <p class="namepill">أروى أحمد محمد عسيري</p>
       <p class="school">شركة المدارس المتقدمة للتعليم الذكي بجدة</p>
+      <p class="period">العام الدراسي ١٤٤٨ - ١٤٤٩هـ</p>
       <a class="btn" href="#leaders">ابدأ التصفح</a>
     </div>
   </header>
@@ -376,11 +408,15 @@ h1,h2,h3,.basmala,.namepill,.name,.who,.big,.v,.pillar b,.eth b,.aim b,.strength
         <a class="row" href="#intro"><span class="n">١</span><span class="t">المقدمة</span><span class="go" aria-hidden="true">‹</span></a>
         <a class="row" href="#school"><span class="n">٢</span><span class="t">رؤية المدرسة ورسالتها</span><span class="go" aria-hidden="true">‹</span></a>
         <a class="row" href="#cv"><span class="n">٣</span><span class="t">السيرة الذاتية</span><span class="go" aria-hidden="true">‹</span></a>
-        <a class="row" href="#ethics"><span class="n">٤</span><span class="t">ميثاق أخلاقيات المهنة</span><span class="go" aria-hidden="true">‹</span></a>
-        <a class="row" href="#q-canteen"><span class="n">٥</span><span class="t">شواهد الإنجاز</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#job"><span class="n">٤</span><span class="t">الوصف الوظيفي والمهام</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#ethics"><span class="n">٥</span><span class="t">ميثاق أخلاقيات المهنة</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#q-late"><span class="n">٦</span><span class="t">شواهد الإنجاز</span><span class="go" aria-hidden="true">‹</span></a>
         <div class="subs" id="subs"></div>
-        <a class="row" href="#strengths"><span class="n">٦</span><span class="t">نقاط القوة ومجالات التطوير</span><span class="go" aria-hidden="true">‹</span></a>
-        <a class="row" href="#closing"><span class="n">٧</span><span class="t">الخاتمة</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#courses"><span class="n">٧</span><span class="t">الدورات التدريبية</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#thanks"><span class="n">٨</span><span class="t">شهادات الشكر والتقدير</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#evtable"><span class="n">٩</span><span class="t">جدول الشواهد</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#strengths"><span class="n">١٠</span><span class="t">نقاط القوة ومجالات التطوير</span><span class="go" aria-hidden="true">‹</span></a>
+        <a class="row" href="#closing"><span class="n">١١</span><span class="t">الخاتمة</span><span class="go" aria-hidden="true">‹</span></a>
       </nav>
     </div>
   </section>
@@ -425,6 +461,8 @@ h1,h2,h3,.basmala,.namepill,.name,.who,.big,.v,.pillar b,.eth b,.aim b,.strength
         <p class="role">مساعد إداري - معلمة</p>
         <dl class="facts">
           <div class="fact"><dt>المسمى الوظيفي</dt><dd><span class="val">مساعد إداري - معلمة</span></dd></div>
+          <div class="fact"><dt>المؤهل</dt><dd><span class="val">بكالوريوس إدارة عامة - جامعة الملك عبدالعزيز</span></dd></div>
+          <div class="fact"><dt>سنوات الخبرة</dt><dd><span class="val">سنتان</span></dd></div>
           <div class="fact"><dt>البريد الإلكتروني</dt><dd><span class="val ltr" id="v-mail">aseeria801@gmail.com</span><button class="copy" type="button" data-copy="aseeria801@gmail.com" data-target="v-mail">نسخ</button></dd></div>
           <div class="fact"><dt>رقم الجوال</dt><dd><span class="val ltr" id="v-tel">٠٥٥٧٨٣٢٢٢١</span><button class="copy" type="button" data-copy="0557832221" data-target="v-tel">نسخ</button></dd></div>
           <div class="fact"><dt>اسم المدرسة</dt><dd><span class="val">شركة المدارس المتقدمة للتعليم الذكي بجدة</span></dd></div>
@@ -433,8 +471,23 @@ h1,h2,h3,.basmala,.namepill,.name,.who,.big,.v,.pillar b,.eth b,.aim b,.strength
     </div>
   </section>
 
+  <!-- الوصف الوظيفي -->
+  <section class="page" id="job">
+    <div class="inner">
+      <div class="hd"><svg class="ico" aria-hidden="true"><use href="#blossom"/></svg><h2>الوصف الوظيفي والمهام</h2></div>
+      <div class="card">
+        <dl class="facts" style="margin:0">
+          <div class="fact" style="border-top:0"><dt>المسمى الوظيفي</dt><dd><span class="val">مساعد إداري - معلمة</span></dd></div>
+          <div class="fact"><dt>جهة العمل</dt><dd><span class="val">شركة المدارس المتقدمة للتعليم الذكي بجدة</span></dd></div>
+        </dl>
+      </div>
+      <p class="lead" style="margin:22px 0 10px">المهام التي أتولاها، ويفتح كل بند شاهده:</p>
+      <div class="tasks" id="jobmount"></div>
+    </div>
+  </section>
+
   <!-- ميثاق أخلاقيات المهنة -->
-  <section class="page" id="ethics">
+  <section class="page alt" id="ethics">
     <div class="inner">
       <div class="hd"><svg class="ico" aria-hidden="true"><use href="#blossom"/></svg><h2>ميثاق أخلاقيات المهنة</h2></div>
       <p class="lead" style="margin-bottom:18px">مبادئ ألتزم بها في عملي كل يوم.</p>
@@ -453,6 +506,39 @@ h1,h2,h3,.basmala,.namepill,.name,.who,.big,.v,.pillar b,.eth b,.aim b,.strength
 
   <!-- شواهد الإنجاز (تُنشأ بالسكربت) -->
   <div id="qrmount"></div>
+
+  <!-- الدورات التدريبية -->
+  <section class="page alt" id="courses">
+    <div class="inner">
+      <div class="hd"><svg class="ico" aria-hidden="true"><use href="#blossom"/></svg><h2>الدورات التدريبية</h2></div>
+      <div class="ctwrap">
+        <table class="ct">
+          <thead><tr><th>اسم الدورة</th><th>جهة الدورة</th><th>تاريخها</th></tr></thead>
+          <tbody id="coursesbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- شهادات الشكر والتقدير -->
+  <section class="page" id="thanks">
+    <div class="inner">
+      <div class="hd"><svg class="ico" aria-hidden="true"><use href="#blossom"/></svg><h2>شهادات الشكر والتقدير</h2></div>
+      <div class="certlist" id="thanksmount"></div>
+    </div>
+  </section>
+
+  <!-- جدول الشواهد -->
+  <section class="page alt" id="evtable">
+    <div class="inner">
+      <div class="hd"><svg class="ico" aria-hidden="true"><use href="#blossom"/></svg><h2>جدول الشواهد</h2></div>
+      <p class="lead">الشواهد المرتبطة بكل إنجاز. يفتح اسم الشاهد صفحته وباركوده.</p>
+      <table class="ev">
+        <thead><tr><th>الشاهد</th><th>التاريخ</th><th>نوعه</th><th>الإنجاز المرتبط به</th></tr></thead>
+        <tbody id="evbody"></tbody>
+      </table>
+    </div>
+  </section>
 
   <!-- نقاط القوة -->
   <section class="page" id="strengths">
@@ -505,7 +591,7 @@ var LINKS = {
   voice: "https://i-ipa.com/a/s/",
   visitors: "https://i-ipa.com/a/z/",
   attendance: "https://i-ipa.com/a/h/",
-  certs: ""
+  certs: "https://drive.google.com/drive/folders/1JcwAwAyamwuZoqcRZQ4UXe88UciON8mP"
 };
 
 /* proc: true تعني إجراءً طوّرتُه وسهّلتُه */
@@ -524,7 +610,36 @@ var ITEMS = [
    task:"متابعة سجل دخول الزوار.", did:"تحويل تسجيل دخول الزوار إلى سجل إلكتروني منظّم.", impact:"تنظيم الاستقبال وسهولة الرجوع إلى السجل متى لزم."},
   {id:"attendance", title:"منصة الحضور والغياب", desc:"امسح الرمز لفتح منصة الحضور والغياب.",
    task:"متابعة الحضور والغياب.", did:"استخدام منصة إلكترونية لتسجيل الحضور والغياب ومتابعته.", impact:"دقة في البيانات وسرعة في استخراجها."},
-  {"id":"certs", title:"الشهادات والدورات", desc:"ملف مرفق يضم شهاداتي ودوراتي وشهادات الشكر والتقدير."}
+  {"id":"certs", title:"الشهادات والدورات", desc:"امسح الرمز لفتح مجلد شهاداتي ودوراتي وشهادات الشكر والتقدير."}
+];
+
+/* ترتيب الإنجازات من الأهم */
+var ORDER = ["late","visitors","mothers","voice","online","attendance","canteen","certs"];
+ITEMS.sort(function(a,b){ return ORDER.indexOf(a.id) - ORDER.indexOf(b.id); });
+
+/* شهادات الشكر والتقدير، مرتبة من الأكثر ارتباطًا بالعمل الإداري. التاريخ [يُستكمل] حيث لا يظهر في الشهادة */
+var CERTS = [
+  {n:"شهادة جائزة Princess Seetah", full:"Certificate of Appreciation - جائزة Princess Seetah للمواطنة المسؤولة",
+   from:"مدارس المتقدمة، فرع جدة", period:"", date:"٢٠٢٥م", rel:"إعداد الطلبة وتوجيههم لجائزة المواطنة المسؤولة"},
+  {n:"شكر من مجمع المدارس (النشاط الطلابي)", full:"شكر وتقدير من إدارة مجمع مدارس المتقدمة للتعلم الذكي",
+   from:"إدارة مجمع مدارس المتقدمة للتعلم الذكي - النشاط الطلابي", period:"", date:"٢٠٢٥م", rel:"المهام الإدارية ومتابعة أعمال المنصات"},
+  {n:"شكر للإدارية - الفصل الأول ١٤٤٧هـ", full:"شكر وتقدير للإدارية عن الفصل الدراسي الأول",
+   from:"مدارس المتقدمة للتعلم الذكي", period:"الفصل الدراسي الأول لعام ١٤٤٧هـ", date:"٢٠٢٥م", rel:"الأداء الإداري خلال الفصل الأول ١٤٤٧هـ"},
+  {n:"شكر للمعلمة - العام الدراسي ١٤٤٧هـ", full:"شكر وتقدير للمعلمة عن العام الدراسي ١٤٤٧هـ",
+   from:"مدارس المتقدمة للتعلم الذكي", period:"العام الدراسي ١٤٤٧هـ", date:"٣٠ يونيو ٢٠٢٦م", rel:"العطاء والإسهام خلال العام الدراسي ١٤٤٧هـ"}
+];
+var AR_N = ["١","٢","٣","٤","٥","٦"];
+
+/* الدورات التدريبية، الأحدث أولًا، من الشهادات المرفقة */
+var COURSES = [
+  {n:"فنيات إدارة بيئة العمل", from:"الوقف العلمي - جامعة الملك عبدالعزيز بجدة", date:"٢ نوفمبر ٢٠٢٥م"},
+  {n:"تطوير المهارات المهنية", from:"الوقف العلمي - جامعة الملك عبدالعزيز بجدة", date:"١٩ و٢٠ يناير ٢٠٢٥م"},
+  {n:"مهارات القيادة", from:"منصة إدراك", date:"٧ سبتمبر ٢٠٢٤م"},
+  {n:"حل المشكلات واتخاذ القرارات", from:"منصة إدراك", date:"٧ سبتمبر ٢٠٢٤م"},
+  {n:"السكرتارية التنفيذية والإدارة المكتبية الحديثة", from:"مركز هدف العالمية للتدريب", date:"٢٨ ذو القعدة ١٤٤٥هـ"},
+  {n:"العقلية الريادية وإدارة الأزمات", from:"أكاديمية منشآت (منصة دروب)", date:"٢١ أبريل ٢٠٢٤م"},
+  {n:"أسس إدارة الموارد البشرية", from:"منصة دروب", date:"٢٥ فبراير ٢٠٢٤م"},
+  {n:"كيف الطالب يبتكر", from:"عمادة شؤون الطلاب - جامعة الملك عبدالعزيز", date:"١٤ فبراير ٢٠٢٤م"}
 ];
 
 function esc(s){ return s.replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
@@ -575,6 +690,31 @@ function placeholderQR(){
     }
     if (!ok) box.innerHTML = placeholderQR();
   });
+})();
+
+/* صفحة الوصف الوظيفي وجدول الشواهد من نفس بيانات الإنجازات */
+(function jobAndTable(){
+  var tasks = "", rows = "";
+  ITEMS.forEach(function(it){
+    if (!it.task) return;
+    tasks += '<a class="task" href="#q-'+it.id+'"><svg class="ico" aria-hidden="true"><use href="#blossom"/></svg><span>'+esc(it.task.replace(/\.$/, ""))+'</span></a>';
+    rows += '<tr><td data-l="الشاهد"><a href="#q-'+it.id+'">'+esc(it.title)+'</a></td><td data-l="التاريخ">٢٠٢٦م</td><td data-l="نوعه">منصة إلكترونية</td><td data-l="الإنجاز المرتبط">'+esc(it.impact)+'</td></tr>';
+  });
+  var cards = "";
+  CERTS.forEach(function(c, i){
+    var d = c.date ? esc(c.date) : '<span class="todo">[يُستكمل]</span>';
+    cards += '<article class="cert"><div class="top"><span class="rk">'+AR_N[i]+'</span><h3>'+esc(c.full)+'</h3></div><dl>' +
+      '<div><dt>الجهة</dt><dd>'+esc(c.from)+'</dd></div>' +
+      (c.period ? '<div><dt>الفترة</dt><dd>'+esc(c.period)+'</dd></div>' : '') +
+      '<div><dt>التاريخ</dt><dd>'+d+'</dd></div></dl></article>';
+    rows += '<tr><td data-l="الشاهد"><a href="#thanks">'+esc(c.n)+'</a></td><td data-l="التاريخ">'+d+'</td><td data-l="نوعه">شهادة شكر وتقدير</td><td data-l="الإنجاز المرتبط">'+esc(c.rel)+'</td></tr>';
+  });
+  document.getElementById("thanksmount").innerHTML = cards;
+  var cr = "";
+  COURSES.forEach(function(c){ cr += '<tr><td>'+esc(c.n)+'</td><td>'+esc(c.from)+'</td><td>'+esc(c.date)+'</td></tr>'; });
+  document.getElementById("coursesbody").innerHTML = cr;
+  document.getElementById("jobmount").innerHTML = tasks;
+  document.getElementById("evbody").innerHTML = rows;
 })();
 
 /* بتلات متساقطة على الغلاف */
